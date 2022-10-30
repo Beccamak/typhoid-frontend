@@ -2,13 +2,14 @@ import {React, useState} from 'react'
 import './Service.css'
 
 function service() {
+  const URL = "https://typhoid-main.herokuapp.com/"
   return (
     <>
       <div className="abcd">
         <div className="col-8 mx-auto">
 
 
-          <form className="fm" action="/service" method="post">
+          <form className="fm" action={`${URL}service`} method="post">
             <h1 className="cd">Typhoid Data Form</h1>
             <p>Please help us to diagnose by filling in our Data form. Thank you!</p>
             <h4 className="cd">Name</h4>

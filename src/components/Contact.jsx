@@ -2,6 +2,7 @@ import React from 'react'
 import './Service.css'
 
 function Contact() {
+  const URL = "https://typhoid-main.herokuapp.com/"
   return (
     <>
       <div className="col-8 mx-auto marginGiven">
@@ -16,7 +17,7 @@ function Contact() {
 
             <div className="col-md-9 mb-md-0 mb-5">
 
-              <form action="/contact" method="post" className="contact-form">
+              <form action={`${URL}contact`} method="post" className="contact-form">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="md-form mb-0">

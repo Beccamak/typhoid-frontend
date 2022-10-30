@@ -4,6 +4,7 @@ import Data from './Data-Loading/comment'
 import CommentCard from './Data-Loading/CommentCard';
 
 function renderHere(item) {
+ 
     return (
 
         <CommentCard firstname={item.firstname} lastname={item.lastname} email={item.email} comment={item.comment} />
@@ -11,6 +12,7 @@ function renderHere(item) {
     );
 }
 function Comments() {
+    const URL = "https://typhoid-main.herokuapp.com/"
     const {
         data,
         loading,
@@ -33,7 +35,7 @@ function Comments() {
                         </>
                     }
                     <div className="my-form">
-                        <form id="contact-form" action="/comments" method="post" role="form">
+                        <form id="contact-form" action={`${URL}comments`} method="post" role="form">
                             <div className="controls">
                             <p><b>If you have any query please ask from community.</b></p>
                                 <div className="row">

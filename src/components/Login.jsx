@@ -3,6 +3,17 @@ import { NavLink } from "react-router-dom";
 import "./LoginRegister.css";
 
 function Login() {
+  const URL = "https://typhoid-main.herokuapp.com/"
+  const [data, setData] = useState({
+    email: "",
+    password: ""
+  })
+  
+  function handle(e){
+    const newdata = {...data};
+    newdata[e.target.id] = e.target.value;
+    setData(newdata);
+  }
   return (
     <div className="iamlegend">
       <div className="container">
@@ -23,7 +34,7 @@ function Login() {
               </div>
             </div>
             <div className="card-body">
-              <form action="auth/login" method="post" role="form">
+              <form action={`${URL}auth/login`} method="post" role="form">
                 <div className="input-group form-group">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
@@ -34,6 +45,8 @@ function Login() {
                     type="email"
                     className="form-control"
                     placeholder="Email Id" name="email"
+                    onChange={(e) => handle(e)}
+                    required
                   />
                 </div>
                 <div className="input-group form-group">
@@ -46,6 +59,8 @@ function Login() {
                     type="password"
                     className="form-control"
                     placeholder="Password" name="password"
+                    onChange={(e) => handle(e)}
+                    required
                   />
                 </div>
                 <div className="row align-items-center remember">
