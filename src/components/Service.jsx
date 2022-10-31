@@ -9,7 +9,7 @@ function service() {
         <div className="col-8 mx-auto">
 
 
-          <form className="fm" action={`${URL}service`} method="post">
+          <form className="fm" action={`${URL}service`}  method="post">
             <h1 className="cd">Typhoid Data Form</h1>
             <p>Please help us to diagnose by filling in our Data form. Thank you!</p>
             <h4 className="cd">Name</h4>
