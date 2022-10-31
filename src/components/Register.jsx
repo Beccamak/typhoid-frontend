@@ -1,4 +1,3 @@
-import '../components/Register.css'
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./LoginRegister.css";
@@ -92,11 +91,7 @@ function Register() {
                     required
                   />
                 </div>
-                <div className="form-group d-flex justify-content-between align-items-center">
-                <div className="reg-success">
-                <p className='sucess-text'>Registration Sucessful</p>
-                <SuccessIcon/>
-                </div>
+                <div className="form-group">
                   <button className="btn float-right login_btn" type="submit" href="http://localhost:3000/service">Register</button>
                 </div>
               </form>
