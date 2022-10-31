@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from "react-router-dom"
 import Data from './Data-Loading/comment'
 import CommentCard from './Data-Loading/CommentCard';
+import { Fragment } from 'react';
 
 function renderHere(item) {
  
@@ -24,7 +25,7 @@ function Comments() {
                     {loading && <p>Loading the comments.....</p>}
 
                     {!loading &&
-                        <>
+                        <Fragment>
                         <div className="comment-heading">
                             <h6>Racist, sexist, homophobic or generally hate filled comments have no place here.</h6>
                             <p>we recommend you follow this list of <NavLink className="my-link" to="/terms-of-use">guidelines</NavLink></p>
@@ -32,7 +33,7 @@ function Comments() {
                         <div>
                             {/* {data.map(item => (renderHere(item)))} */}
                         </div>
-                        </>
+                        </Fragment>
                     }
                     <div className="my-form">
                         <form id="contact-form" action={`${URL}comments`} method="post" role="form">
